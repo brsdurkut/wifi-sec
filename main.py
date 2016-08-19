@@ -1,4 +1,8 @@
 #!/usr/bin/python
+"""
+The product scans nearby network devices. After that, 
+it tries to capture WPA Handshake belong to these network devices.
+"""
 # -*- coding: utf-8 -*-
 import logging
 import logging.config
