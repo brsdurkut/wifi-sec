@@ -1,0 +1,34 @@
+# Constraints to optimize tasks
+# timeout - maximum time for a task
+# limit - maximum count of found access points or clients
+# signal - minimum signal power of found access points or clients to add target list
+# encryption - encryption type of found access point to add target list
+# exception - MAC addresses of access points and clients to be ignored
+airodump:
+  ap:
+    timeout: 30
+    limit: 10
+    signal: 10
+    encryption: [WPA]
+    exception: ['38:D8:2F:1E:FF:FF',
+                '2C:95:7F:4A:FF:FF']
+  client:
+    timeout: 30
+    limit: 5
+    signal: 10
+    exception: ['98:F1:70:26:FF:FF']
+
+  capture:
+    timeout: 30
+
+aireplay:
+  count: 5  # will be sent count of deauthentication packet at a time.
+
+tool:
+  interface: 'wlan1mon' # network interface name that is monitor mode
+  dump: 'dump/'         # directory that exported data are kept
+  capture: 'captured/'  # directory that handshake captured files are kept
+
+dropbox:
+  access_token: 'f996Ra9gM7AAAAAAAAAAS1663nsqaugoGdC1_qlWspWE-uWVWanfKV7o1PStCwBM'
+  dir_remote: '/captured/'
