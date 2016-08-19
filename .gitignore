@@ -1,3 +1,5 @@
 *.pyc
 *.sh
 *.log
+*.cap
+*.csv
